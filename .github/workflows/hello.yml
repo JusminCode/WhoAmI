@@ -1,10 +1,12 @@
-name: Hello I'm Flow
+name: Hello
 
 on:
   push:
-    branches: [ main  ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+        - main
 
 jobs:
   hello:
