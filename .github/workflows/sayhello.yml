@@ -11,12 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name:
-          __
-          / _)
-          _.----._/ /
-          /         /
-          __/ (  | (  |
-          /__.-'|_|--|_|
-          join hack club https://hackclub.com
-        run: echo "Hello I'm Flow"
+      - name: Checkout
+        uses: actions/checkout@v3.5.3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: just say hello ❤️❤️
+        run: echo "No anything i want just say hello to you 😁😁😁"
