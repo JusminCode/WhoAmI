@@ -1,0 +1,22 @@
+name: Prettier formatter
+
+on:
+  push:
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+    prettier:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3.5.3
+              with:
+                ref: ${{ github.head_ref }}
+
+            - name: Prettier
+              uses: creyD/prettier-action@v4.3
+              with:
+                prettier_options: --write **/*.{js,jsx,ts,tsx,css,scss,md,json,yml,yaml}
+                only_changed_files: true

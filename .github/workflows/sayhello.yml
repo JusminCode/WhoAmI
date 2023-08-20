@@ -19,10 +19,4 @@ jobs:
           __/ (  | (  |
           /__.-'|_|--|_|
           join hack club https://hackclub.com
-        run: echo "               __
-          / _)
-      _.----._/ /
-    /         /
-  __/ (  | (  |
-  /__.-'|_|--|_|
-  join hack club https://hackclub.com"
+        run: echo "Hello I'm Flow"
