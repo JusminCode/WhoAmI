@@ -1,0 +1,15 @@
+name: Hello I'm Flow
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello I'm Flow
+        run: echo "Hello I'm Flow"
