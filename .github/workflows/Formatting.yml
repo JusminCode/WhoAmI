@@ -19,5 +19,5 @@ jobs:
       - name: Prettier
         uses: creyD/prettier_action@v4.3
         with:
-          prettier_options: --write **/*.{js,jsx,ts,tsx,css,scss,md,json,yml,yaml}
+          prettier_options: --write
           only_changed_files: true
