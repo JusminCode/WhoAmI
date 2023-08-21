@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import "./App.css";
+import React from "react";
+import {createAudioElement, toggleAudio} from "./utils/audioUtils.jsx";
+import {createAnimationImage, animate} from "./utils/animationUtils.jsx";
 
 function App() {
-    const [count, setCount] = useState(0)
+    const imageUrls = [
+        'assets/animation/shot-1.svg',
+        'assets/animation/shot-2.svg',
+        'assets/animation/shot-3.svg',
+        'assets/animation/shot-4.svg',
+        'assets/animation/shot-5.svg',
+        'assets/animation/shot-6.svg',
+        'assets/animation/shot-7.svg',
+        'assets/animation/shot-8.svg',
+        'assets/animation/shot-9.svg',
+        'assets/animation/shot-10.svg',
+    ];
+    const start = () => {
+        const container = document.querySelector(".container");
+        container.removeChild(document.querySelector(".begin"));
+        document.querySelector("body").classList.add("colored-background");
 
+        const audio = createAudioElement();
+        const animationImage = createAnimationImage();
+        animate(animationImage, imageUrls);
+        animationImage.onclick = () => toggleAudio(audio);
+    }
     return (
-        <>
-            <div>
-                <a href="https://vitejs.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
-        </>
-    )
+        <div className="container">
+      <span
+          className="begin glitch"
+          data-text="Begin (with my favorite audio)"
+          onClick={start}
+      >
+        Begin (with my favorite audio)
+      </span>
+        </div>
+    );
 }
 
-export default App
+export default App;
