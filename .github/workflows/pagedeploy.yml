@@ -1,49 +1,49 @@
-name: Auto deploy to github page
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout 😁
-        uses: actions/checkout@v3.5.3
-
-      - name: Use Node.js 18.x 👨‍🔧
-        uses: actions/setup-node@v3.8.1
-        with:
-          node-version: 18.x
-
-      - name: Install Dependencies 🐜
-        run: npm ci
-
-      - name: Build ✨🌟
-        run: npm run build --if-present
-
-      - name: Deploy 🚀💖
-        uses: actions/upload-artifact@v3
-        with:
-          name: production-files
-          path: ./dist
-
-  deploy:
-    name: Deploy 🚀✨
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-
-    steps:
-      - name: Download artifact 😁
-        uses: actions/download-artifact@v3
-        with:
-          name: production-files
-          path: ./dist
-      - name: Deploy to Github Pages 💖
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+#name: Auto deploy to github page
+#
+#on:
+#  push:
+#    branches:
+#      - main
+#
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout 😁
+#        uses: actions/checkout@v3.5.3
+#
+#      - name: Use Node.js 18.x 👨‍🔧
+#        uses: actions/setup-node@v3.8.1
+#        with:
+#          node-version: 18.x
+#
+#      - name: Install Dependencies 🐜
+#        run: npm ci
+#
+#      - name: Build ✨🌟
+#        run: npm run build
+#
+#      - name: Deploy 🚀💖
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: production-files
+#          path: ./dist
+#
+#  deploy:
+#    name: Deploy 🚀✨
+#    needs: build
+#    runs-on: ubuntu-latest
+#    if: github.ref == 'refs/heads/main'
+#
+#    steps:
+#      - name: Download artifact 😁
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: production-files
+#          path: ./dist
+#      - name: Deploy to Github Pages 💖
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: ./dist
