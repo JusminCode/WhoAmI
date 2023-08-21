@@ -7,8 +7,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('app')).render(
     <React.StrictMode>
-        <Social/>
         <App/>
+        <Social/>
         <Overlay/>
     </React.StrictMode>,
 )
