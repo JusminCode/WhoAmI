@@ -52,6 +52,15 @@ little start on my path to build a web game,I hope you like it.😁 And I'm sorr
 
 If you like this project, You can support me with starring ⭐ this repository.
 
+# Log work for this project 📝
+
+- **Step 1** : I create a new project repository on GitHub, install React and create a new React app. I also install
+  some dependencies that I will use in this project. And last I create some action for GitHub workflow to deploy this.
+- **Step 2** : I draw my character model vector file in illustrator and export it to PNG files.
+
+## Features 🌟
+- **Responsive Design** : This website is responsive, and it also works well on mobile devices.
+
 # Super Thanks for inspiration 🙏
 
 - [Dinosaur BBQ](https://www.dinosaurbbq.org/)
