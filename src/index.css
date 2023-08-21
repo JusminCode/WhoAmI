@@ -1,69 +1,152 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://kit-pro.fontawesome.com/releases/v6.4.2/css/pro.min.css');
 
 body {
-  margin: 0;
+  background-color: #222;
+  animation: none;
+}
+
+.colored-background {
+  transition: background-color 1000ms linear;
+  animation: colored-background linear 12s infinite;
+}
+
+@keyframes colored-background {
+  0% {
+    background-color: #8b1c86;
+  }
+  20% {
+    background-color: rgb(29, 28, 121);
+  }
+  40% {
+    background-color: rgb(48, 153, 44);
+  }
+  60% {
+    background-color: rgb(170, 148, 51);
+  }
+  80% {
+    background-color: rgb(168, 44, 39);
+  }
+  100% {
+    background-color: #8b1c86;
+  }
+}
+
+@keyframes transition-in {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+/* From https://codepen.io/patrickhlauke/pen/YaoBop */
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 1px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.vcr-overlay {
+  background: url('assets/images/retro-screen.gif');
+  background-size: cover;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.begin {
+  font-size: 2em;
+  font-family: 'VT323', monospace;
+  font-weight: bolder;
+  text-align: center;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.flicker-text {
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.phrase-box {
+  font-family: 'VT323', monospace;
+  color: white;
+  font-weight: bold;
+  /* animation: transition-in ease-in-out 3s; */
+}
+
+@media (max-width: 300px) {
+  .phrase-box {
+    font-size: 1em;
   }
-  a:hover {
-    color: #747bff;
+}
+
+@media (min-width: 500px) {
+  .phrase-box {
+    font-size: 2em;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media (min-width: 700px) {
+  .phrase-box {
+    font-size: 3em;
   }
+}
+
+img {
+  width: 50%;
+  animation: transition-in ease-in-out 3s;
+  cursor: pointer;
+}
+
+.social-icons {
+  position: fixed;
+  top: 10%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-button {
+  animation: colored-background linear 12s infinite;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: #666;
 }

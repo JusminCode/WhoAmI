@@ -1,42 +1,257 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* From https://codepen.io/cipherbeta/pen/YLdVjw */
+
+.sub {
+  color: #64dcdc;
+  letter-spacing: 1em;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Our mixin positions a copy of our text
+directly on our existing text, while
+also setting content to the appropriate
+text set in the data-text attribute. */
+.glitch {
+  position: relative;
+  color: white;
+  letter-spacing: 0.1em;
+  /* Animation provies a slight random skew. Check bottom of doc
+  for more information on how to random skew. */
+  animation: glitch-skew 1s infinite linear alternate-reverse;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  /* Creates an initial clip for our glitch. This works in
+  a typical top,right,bottom,left fashion and creates a mask
+  to only show a certain part of the glitch at a time. */
+  clip: rect(44px, 450px, 56px, 0);
+  /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
+  with an alternating animation to keep things fresh. */
+  animation: glitch-anim 5s infinite linear alternate-reverse;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Creates an animation with 20 steaps. For each step, it calculates
+a percentage for the specific step. It then generates a random clip
+box to be used for the random glitch effect. Also adds a very subtle
+skew to change the 'thickness' of the glitch.*/
+@keyframes glitch-anim {
+  0% {
+    clip: rect(37px, 9999px, 39px, 0);
+    transform: skew(0.63deg);
   }
-  to {
-    transform: rotate(360deg);
+  5% {
+    clip: rect(34px, 9999px, 17px, 0);
+    transform: skew(0.66deg);
+  }
+  10% {
+    clip: rect(46px, 9999px, 24px, 0);
+    transform: skew(0.92deg);
+  }
+  15% {
+    clip: rect(69px, 9999px, 93px, 0);
+    transform: skew(0.33deg);
+  }
+  20% {
+    clip: rect(27px, 9999px, 89px, 0);
+    transform: skew(0.46deg);
+  }
+  25% {
+    clip: rect(39px, 9999px, 97px, 0);
+    transform: skew(0.12deg);
+  }
+  30% {
+    clip: rect(65px, 9999px, 51px, 0);
+    transform: skew(0.66deg);
+  }
+  35% {
+    clip: rect(95px, 9999px, 100px, 0);
+    transform: skew(0.48deg);
+  }
+  40% {
+    clip: rect(77px, 9999px, 66px, 0);
+    transform: skew(0.71deg);
+  }
+  45% {
+    clip: rect(37px, 9999px, 9px, 0);
+    transform: skew(0.22deg);
+  }
+  50% {
+    clip: rect(89px, 9999px, 91px, 0);
+    transform: skew(0.37deg);
+  }
+  55% {
+    clip: rect(89px, 9999px, 11px, 0);
+    transform: skew(0.7deg);
+  }
+  60% {
+    clip: rect(13px, 9999px, 50px, 0);
+    transform: skew(0.84deg);
+  }
+  65% {
+    clip: rect(41px, 9999px, 48px, 0);
+    transform: skew(0.99deg);
+  }
+  70% {
+    clip: rect(73px, 9999px, 71px, 0);
+    transform: skew(0.8deg);
+  }
+  75% {
+    clip: rect(39px, 9999px, 28px, 0);
+    transform: skew(0.36deg);
+  }
+  80% {
+    clip: rect(1px, 9999px, 70px, 0);
+    transform: skew(0.72deg);
+  }
+  85% {
+    clip: rect(43px, 9999px, 50px, 0);
+    transform: skew(0.48deg);
+  }
+  90% {
+    clip: rect(14px, 9999px, 14px, 0);
+    transform: skew(0.2deg);
+  }
+  95% {
+    clip: rect(70px, 9999px, 51px, 0);
+    transform: skew(0.14deg);
+  }
+  100% {
+    clip: rect(21px, 9999px, 60px, 0);
+    transform: skew(0.61deg);
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(16px, 9999px, 79px, 0);
+    transform: skew(0.02deg);
+  }
+  5% {
+    clip: rect(86px, 9999px, 87px, 0);
+    transform: skew(0.41deg);
+  }
+  10% {
+    clip: rect(35px, 9999px, 67px, 0);
+    transform: skew(0.11deg);
+  }
+  15% {
+    clip: rect(10px, 9999px, 59px, 0);
+    transform: skew(0.43deg);
+  }
+  20% {
+    clip: rect(86px, 9999px, 71px, 0);
+    transform: skew(0.18deg);
+  }
+  25% {
+    clip: rect(12px, 9999px, 95px, 0);
+    transform: skew(0.22deg);
+  }
+  30% {
+    clip: rect(46px, 9999px, 29px, 0);
+    transform: skew(0.5deg);
+  }
+  35% {
+    clip: rect(3px, 9999px, 41px, 0);
+    transform: skew(0.3deg);
+  }
+  40% {
+    clip: rect(5px, 9999px, 12px, 0);
+    transform: skew(0.56deg);
+  }
+  45% {
+    clip: rect(99px, 9999px, 92px, 0);
+    transform: skew(0.44deg);
+  }
+  50% {
+    clip: rect(72px, 9999px, 53px, 0);
+    transform: skew(0.97deg);
+  }
+  55% {
+    clip: rect(4px, 9999px, 28px, 0);
+    transform: skew(0.57deg);
+  }
+  60% {
+    clip: rect(13px, 9999px, 69px, 0);
+    transform: skew(0.77deg);
+  }
+  65% {
+    clip: rect(87px, 9999px, 27px, 0);
+    transform: skew(0.16deg);
+  }
+  70% {
+    clip: rect(59px, 9999px, 37px, 0);
+    transform: skew(0.51deg);
+  }
+  75% {
+    clip: rect(57px, 9999px, 59px, 0);
+    transform: skew(0.36deg);
+  }
+  80% {
+    clip: rect(30px, 9999px, 12px, 0);
+    transform: skew(0.02deg);
+  }
+  85% {
+    clip: rect(10px, 9999px, 13px, 0);
+    transform: skew(0.38deg);
+  }
+  90% {
+    clip: rect(72px, 9999px, 80px, 0);
+    transform: skew(0.09deg);
+  }
+  95% {
+    clip: rect(6px, 9999px, 25px, 0);
+    transform: skew(0.24deg);
+  }
+  100% {
+    clip: rect(70px, 9999px, 20px, 0);
+    transform: skew(0.36deg);
   }
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+@keyframes glitch-skew {
+  0% {
+    transform: skew(4deg);
+  }
+  10% {
+    transform: skew(-4deg);
+  }
+  20% {
+    transform: skew(4deg);
+  }
+  30% {
+    transform: skew(-2deg);
+  }
+  40% {
+    transform: skew(3deg);
+  }
+  50% {
+    transform: skew(5deg);
+  }
+  60% {
+    transform: skew(1deg);
+  }
+  70% {
+    transform: skew(0deg);
+  }
+  80% {
+    transform: skew(4deg);
+  }
+  90% {
+    transform: skew(-3deg);
+  }
+  100% {
+    transform: skew(4deg);
+  }
 }

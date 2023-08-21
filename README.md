@@ -43,8 +43,8 @@ little start on my path to build a web game,I hope you like it.😁 And I'm sorr
 
 - **Client :** [React](https://reactjs.org/) , [JavaScript](https://www.javascript.com/) , HTML5 , CSS3
 - **Design :** [illustrator](https://www.adobe.com/products/illustrator.html) , [Figma](https://www.figma.com/)
-- **Version Control :** [Github](https://github.com/64Dev/WhoAmI)
-- **Hosting :** [Github Pages](https://pages.github.com/)
+- **Version Control :** [GitHub](https://github.com/64Dev/WhoAmI)
+- **Hosting :** [GitHub Pages](https://pages.github.com/)
 - **Domain :** [4is.me](https://4is.me) , [Six4.dev](https://six4.dev)
 - **Code Editor :** [WebStorm](https://www.jetbrains.com/webstorm/)
 
@@ -52,14 +52,24 @@ little start on my path to build a web game,I hope you like it.😁 And I'm sorr
 
 If you like this project, You can support me with starring ⭐ this repository.
 
-# Log work for this project 📝
+# Version 📌
 
-- **Step 1** : I create a new project repository on GitHub, install React and create a new React app. I also install
-  some dependencies that I will use in this project. And last I create some action for GitHub workflow to deploy this.
-- **Step 2** : I draw my character model vector file in illustrator and export it to PNG files.
+- **Current Version :** 1.0.0
+- **Last Update :** 2023/08/21
+
+| Version |    Date    |            Description             |     |
+|:-------:|:----------:|:----------------------------------:|-----|
+|  1.0.0  | 2023/08/21 | Use Vite + React Responsive Design |     |
 
 ## Features 🌟
 - **Responsive Design** : This website is responsive, and it also works well on mobile devices.
+- **Images Animation** : I use this technique to make animation from pictures.
+- **Audio autoplay** : I use this technique to make audio autoplay when you enter the website.
+- **Workflows Auto** : I make workflows auto with GitHub Actions. Function tester and deploy to GitHub Pages.
+
+# Next Version 📌
+- [ ] Add Sprite Animation
+- [ ] Make a character move dance Toca Toca song.
 
 # Super Thanks for inspiration 🙏
 
