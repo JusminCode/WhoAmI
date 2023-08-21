@@ -6,6 +6,19 @@ import {createPhraseBox, phrase} from "./utils/phraseUtils.jsx";
 import club from "./utils/club.easterEgg.jsx";
 
 function App() {
+    const preloadImages = (urls) => {
+        const promises = urls.map((url) => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => resolve();
+                img.onerror = () => reject();
+                img.src = url;
+            });
+        });
+
+        return Promise.all(promises);
+    };
+
     club(64);
 
     const imageUrls = [
@@ -30,13 +43,19 @@ function App() {
         "I not failed. I’ve just found 10,000 ways that won’t work.",
         "Whitespace is never white.",
     ];
-    const start = () => {
+    const start = async () => {
         const audio = createAudioElement();
         const animationImage = createAnimationImage()
         const phraseBox = createPhraseBox();
 
         phrase(phraseBox, phrasesList);
-        animate(animationImage, imageUrls);
+
+        try {
+            await preloadImages(imageUrls);
+            animate(animationImage, imageUrls);
+        } catch (error) {
+            console.error('Error preloading images:', error);
+        }
 
         const container = document.querySelector(".container");
         container.removeChild(document.querySelector(".begin"));
