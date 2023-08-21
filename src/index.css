@@ -150,3 +150,12 @@ img {
 .icon-button:hover {
   background-color: #666;
 }
+
+.hackclub-badge {
+  margin: 0;
+  bottom: 2%;
+  position: absolute;
+  display: flex;
+  text-align: center;
+  right: 47%;
+}
