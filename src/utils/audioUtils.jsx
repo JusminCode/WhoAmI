@@ -1,6 +1,6 @@
 const createAudioElement = () => {
     const audio = document.createElement('audio');
-    audio.src = 'assets/audio/Aaron-smith-Dancin-KRONO_Remix.mp3';
+    audio.src = 'assets/audio/Majestic_x_Boney_M-Rasputin_2022_Remix.mp3';
     audio.loop = true;
     audio.autoplay = true;
     document.querySelector('.container').appendChild(audio);

@@ -3,7 +3,7 @@ const createAnimationImage = () => {
     AnimationImage.classList.add('animated-image');
     document.querySelector('.container').appendChild(AnimationImage);
     return AnimationImage
-}
+};
 
 const animate = (AnimationImage, imageUrls) => {
     let currentIndex = 0;
