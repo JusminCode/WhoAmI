@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  DeployPage:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,8 +25,29 @@ jobs:
         run: npm run build --if-present
 
       - name: Deploy 🚀💖
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: production-files
+          path: ./dist
+
+    deploy:
+      name: Deploy 🚀✨
+      needs: build
+      runs-on: ubuntu-latest
+      if: github.ref == 'refs/heads/main'
+
+      steps:
+        - name: Download artifact 😁
+          uses: actions/download-artifact@v3
+          with:
+            name: production-files
+            path: ./dist
+        - name: Deploy to Github Pages 💖
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./dist
+        - name: Finish 🎉
+          uses: JesseTG/rm@v1.0.3
+          with:
+            args: -rf ./dist
