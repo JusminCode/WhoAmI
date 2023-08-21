@@ -40,7 +40,7 @@ function App() {
         "Computers are fast, programmers keep it slow.",
         "Linux is only free if your time has no value.",
         "God is real... unless declared integer. 👼",
-        "I not failed. I’ve just found 10,000 ways that won’t work.",
+        "I not failed. I’ve just found 10K ways that won’t work.",
         "Whitespace is never white.",
     ];
     const start = async () => {
@@ -60,6 +60,11 @@ function App() {
         const container = document.querySelector(".container");
         container.removeChild(document.querySelector(".begin"));
         document.querySelector("body").classList.add("colored-background");
+
+        const hackclubLogo = document.querySelector(".webring-logo");
+        const mailBadge = document.querySelector(".fa-duotone");
+        hackclubLogo.classList.add("fa-spin");
+        mailBadge.classList.add("fa-spin");
 
         animationImage.onclick = () => toggleAudio(audio);
     }

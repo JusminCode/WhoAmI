@@ -5,7 +5,7 @@ function Social() {
                 <i className="fa-brands fa-github-alt fa-bounce fa-xl"></i>
             </a>
             <a href="mailto:exact@six4.dev" className="icon-button email">
-                <i className="fa-duotone fa-envelope-open-text fa-spin fa-xl"></i>
+                <i className="fa-duotone fa-envelope-open-text fa-xl"></i>
             </a>
         </div>
     );

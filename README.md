@@ -1,4 +1,4 @@
-# Who am i ?
+# Who am I ?
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/64Dev/WhoAmI)](https://github.com/64Dev/WhoAmI/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/64Dev/WhoAmI)](https://github.com/64Dev/WhoAmI)
@@ -30,7 +30,7 @@ A few day ago, I was looking for a new project to work on. I wanted to build som
 would allow me to learn something new.I go to join a hackathon.And that was the way for me to join the HackClub
 community,and after
 that I study friends' many projects of many friends, and I found [this website](https://www.dinosaurbbq.org/)
-accidentally,That's so cool! I want to make a website like this and confident that I can do it.But why i never do it
+accidentally,That's so cool! I want to make a website like this and confident that I can do it.But why I never do it
 because I don't have creative ideas like this,which is really sad.😅
 But! I don't want to plagiarize all of it, so I decided to make a website with some tricks and techniques that I'm
 learning. I'm learning this technique to someday I can build a simple web game.That's a technique
