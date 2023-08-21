@@ -16,7 +16,7 @@
 
   https://4is.me
 
-> Hello there 👋,My name is Four or Flow nick @64Dev
+> Hello there 👋,My name is Four or Flow nick @6ix4
 > 
 > I'm a student and a web developer,I help authors of open source projects ,I'm a member of the HackClub community and
 > work with non-profit organizations for my passion.
@@ -29,7 +29,7 @@ make animation from PNG pictures.
 A few day ago, I was looking for a new project to work on. I wanted to build something that would be fun to work on and
 would allow me to learn something new.I go to join a hackathon.And that was the way for me to join the HackClub
 community,and after
-that I study friends' many projects of many friends, and I found [this website](https://www.dinosaurbbq.org/)
+that I study friends' many projects of many friends, and I found [this website](https://www.dinosaurbbq.org/) { Author [Max Wofford](https://github.com/maxwofford) }
 accidentally,That's so cool! I want to make a website like this and confident that I can do it.But why I never do it
 because I don't have creative ideas like this,which is really sad.😅
 But! I don't want to plagiarize all of it, so I decided to make a website with some tricks and techniques that I'm
@@ -108,5 +108,6 @@ $ npm run dev
 # Super Thanks for inspiration 🙏
 
 - [Dinosaur BBQ](https://www.dinosaurbbq.org/)
+- [Max Wofford](https://github.com/maxwofford)
 - [Sprite Animation](https://www.youtube.com/watch?v=3b7FyIxWW94&list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i&index=1)
 - [HackClub](https://hackclub.com/)
