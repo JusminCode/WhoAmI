@@ -1,7 +1,6 @@
 name: 6ix4 Automate React Testing
 
 on:
-  push:
   pull_request:
     branches:
       - main
