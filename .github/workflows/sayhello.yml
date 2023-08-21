@@ -1,7 +1,6 @@
 name: Hello I'm Flow
 
 on:
-  push:
   pull_request:
     branches:
       - main
@@ -11,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout ☑️🚦
         uses: actions/checkout@v3.5.3
         with:
           ref: ${{ github.head_ref }}
