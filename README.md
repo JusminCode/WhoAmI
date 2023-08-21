@@ -87,12 +87,13 @@ $ npm run dev
 
 # Version 📌
 
-- **Current Version :** 1.0.0
-- **Last Update :** 2023/08/21
+- **Current Version :** 1.0.2
+- **Last Update :** 2023/08/22
 
-| Version |    Date    |            Description             |     |
-|:-------:|:----------:|:----------------------------------:|-----|
-|  1.0.1  | 2023/08/21 | Use Vite + React Responsive Design |     |
+| Version |    Date    |             Description             |     |
+|:-------:|:----------:|:-----------------------------------:|-----|
+|  1.0.1  | 2023/08/21 | Use Vite + React Responsive Design  |     |
+|  1.0.2  | 2023/08/22 | fix anything bug and prod to 4is.me |     |
 
 ## Features 🌟
 - **Responsive Design** : This website is responsive, and it also works well on mobile devices.
