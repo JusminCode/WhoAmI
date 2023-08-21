@@ -30,24 +30,20 @@ jobs:
           name: production-files
           path: ./dist
 
-    deploy:
-      name: Deploy 🚀✨
-      needs: build
-      runs-on: ubuntu-latest
-      if: github.ref == 'refs/heads/main'
+  deploy:
+    name: Deploy 🚀✨
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
 
-      steps:
-        - name: Download artifact 😁
-          uses: actions/download-artifact@v3
-          with:
-            name: production-files
-            path: ./dist
-        - name: Deploy to Github Pages 💖
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./dist
-        - name: Finish 🎉
-          uses: JesseTG/rm@v1.0.3
-          with:
-            args: -rf ./dist
+    steps:
+      - name: Download artifact 😁
+        uses: actions/download-artifact@v3
+        with:
+          name: production-files
+          path: ./dist
+      - name: Deploy to Github Pages 💖
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
