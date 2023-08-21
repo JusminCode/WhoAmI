@@ -9,16 +9,16 @@ function App() {
     club(64);
 
     const imageUrls = [
-        'assets/animation/shot-1.svg',
-        'assets/animation/shot-2.svg',
-        'assets/animation/shot-3.svg',
-        'assets/animation/shot-4.svg',
-        'assets/animation/shot-5.svg',
-        'assets/animation/shot-6.svg',
-        'assets/animation/shot-7.svg',
-        'assets/animation/shot-8.svg',
-        'assets/animation/shot-9.svg',
-        'assets/animation/shot-10.svg',
+        'assets/animation/shot_01.svg',
+        'assets/animation/shot_02.svg',
+        'assets/animation/shot_03.svg',
+        'assets/animation/shot_04.svg',
+        'assets/animation/shot_05.svg',
+        'assets/animation/shot_06.svg',
+        'assets/animation/shot_07.svg',
+        'assets/animation/shot_08.svg',
+        'assets/animation/shot_09.svg',
+        'assets/animation/shot_10.svg',
     ];
 
     const phrasesList = [
