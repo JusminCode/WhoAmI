@@ -36,11 +36,11 @@ function App() {
 
     const phrasesList = [
         "There’s no place like 127.0.0.1 😁",
-        "Programmer:A machine that caffeine & pizza into code.",
+        "Programmer:machine that caffeine & 🍕 into code.",
         "Computers are fast, programmers keep it slow.",
         "Linux is only free if your time has no value.",
         "God is real... unless declared integer. 👼",
-        "I not failed. I’ve just found 10K ways that won’t work.",
+        "I not failed. I’ve found 10K ways that won’t work.",
         "Whitespace is never white.",
     ];
     const start = async () => {

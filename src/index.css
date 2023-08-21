@@ -78,7 +78,7 @@ body {
 }
 
 .begin {
-  font-size: 2em;
+  font-size: 2m;
   font-family: 'VT323', monospace;
   font-weight: bolder;
   text-align: center;
@@ -107,11 +107,17 @@ body {
 
 @media (min-width: 500px) {
   .phrase-box {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
 @media (min-width: 700px) {
+  .phrase-box {
+    font-size: 2.3em;
+  }
+}
+
+@media (min-width: 900px) {
   .phrase-box {
     font-size: 3em;
   }
@@ -125,7 +131,7 @@ img {
 
 .social-icons {
   position: fixed;
-  top: 10%;
+  top: 14%;
   right: 30px;
   transform: translateY(-50%);
   display: flex;
@@ -139,7 +145,7 @@ img {
   border-radius: 50%;
   width: 46px;
   height: 46px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

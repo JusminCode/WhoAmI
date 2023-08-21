@@ -12,9 +12,9 @@
 [![GitHub forks](https://img.shields.io/github/forks/64Dev/WhoAmI)](https://github.com/64Dev/WhoAmI/network/members)
 [![GitHub stars](https://img.shields.io/github/stars/64Dev/WhoAmI)](https://github.com/64Dev/WhoAmI/stargazers)
 [![GitHub contributors](https://img.shields.io/github/contributors/64Dev/WhoAmI)](https://github.com/64Dev/WhoAmI/graphs/contributors)
-
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/64Dev/WhoAmI)](https://github.com/64Dev/WhoAmI/releases)
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/64Dev/WhoAmI?include_prereleases)](https://github.com/64Dev/WhoAmI/releases)
+
+  https://4is.me
 
 > Hello there 👋,My name is Four or Flow nick @64Dev
 > 
@@ -52,6 +52,39 @@ little start on my path to build a web game,I hope you like it.😁 And I'm sorr
 
 If you like this project, You can support me with starring ⭐ this repository.
 
+# Contributing 🤝
+
+Contributions, issues and feature requests are welcome. Feel free to check
+issues page if you want to contribute.
+
+# How to use 📖
+
+From your command line, first clone WhoAmI:
+
+### Clone this repository
+```bash
+$ git clone https://github.com/6ix4/WhoAmI.git
+```
+
+### Go into the repository
+```bash
+$ cd WhoAmI
+```
+
+### Install dependencies
+```bash
+$ npm install
+```
+
+### Run the app
+```bash
+$ npm run dev
+```
+# Screenshots 📷
+
+![img.png](src/test/__snapshots__/img.png)
+![img.png](src/test/__snapshots__/img2.png)
+
 # Version 📌
 
 - **Current Version :** 1.0.0
@@ -59,7 +92,7 @@ If you like this project, You can support me with starring ⭐ this repository.
 
 | Version |    Date    |            Description             |     |
 |:-------:|:----------:|:----------------------------------:|-----|
-|  1.0.0  | 2023/08/21 | Use Vite + React Responsive Design |     |
+|  1.0.1  | 2023/08/21 | Use Vite + React Responsive Design |     |
 
 ## Features 🌟
 - **Responsive Design** : This website is responsive, and it also works well on mobile devices.
