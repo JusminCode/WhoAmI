@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  tests:
+  ReactTester:
     runs-on: ubuntu-latest
 
     steps:
