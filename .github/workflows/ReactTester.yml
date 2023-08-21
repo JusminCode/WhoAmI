@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout 😉🚦
         uses: actions/checkout@v3.5.3
 
-      - name: Use Node.js 18.x
+      - name: Use Node.js 18.x 🧑‍🔧
         uses: actions/setup-node@v3.8.1
         with:
           node-version: 18.x
 
-      - name: Install Dependencies
+      - name: Install Dependencies 🐞
         run: npm ci
 
-      - name: Run Tests by vitest
+      - name: Run Tests by vitest 🤖
         run: npm test

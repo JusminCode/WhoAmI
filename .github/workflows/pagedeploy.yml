@@ -10,21 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout 😁
         uses: actions/checkout@v3.5.3
 
-      - name: Use Node.js 18.x
+      - name: Use Node.js 18.x 👨‍🔧
         uses: actions/setup-node@v3.8.1
         with:
           node-version: 18.x
 
-      - name: Install Dependencies
+      - name: Install Dependencies 🐜
         run: npm ci
 
-      - name: Build
+      - name: Build ✨🌟
         run: npm run build --if-present
 
-      - name: Deploy
+      - name: Deploy 🚀💖
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
