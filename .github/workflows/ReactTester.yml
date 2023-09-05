@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout 😉🚦
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v4.0.0
 
       - name: Use Node.js 18.x 🧑‍🔧
         uses: actions/setup-node@v3.8.1
